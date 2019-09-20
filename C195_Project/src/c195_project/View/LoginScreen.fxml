@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="loginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195_project.View.LoginScreenController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/global_new.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="gcLoginText" layoutX="398.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="431.0" stylesheets="@style.css" text="globalConsulting, LLC" textAlignment="CENTER" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="125.0">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="2.5" width="2.0" />
+         </effect>
+      </Label>
+      <TextField fx:id="userNameField" cache="true" cacheHint="SPEED" layoutX="400.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Username:" stylesheets="@style.css" />
+      <PasswordField fx:id="passwordField" cache="true" cacheHint="SPEED" layoutX="400.0" layoutY="316.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Password:" stylesheets="@style.css" />
+      <Button fx:id="loginButton" defaultButton="true" layoutX="605.0" layoutY="316.0" mnemonicParsing="false" onAction="#submitLogin" stylesheets="@style.css" text="Login" />
+   </children>
+</AnchorPane>

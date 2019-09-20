@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195_project.View.AppointmentScreenController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/global_new_sm.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="custGrid" layoutX="25.0" layoutY="119.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="327.0" stylesheets="@style.css" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="20.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="130.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+         </rowConstraints>
+         <children>
+            <HBox spacing="2.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <children>
+                  <Button fx:id="addBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddCust" prefHeight="25.0" prefWidth="40.0" stylesheets="@style.css" text="Add" HBox.hgrow="NEVER" />
+                  <Button fx:id="modBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleModCust" prefHeight="25.0" prefWidth="40.0" stylesheets="@style.css" text="Mod" HBox.hgrow="NEVER" />
+                  <Button fx:id="delCustBtn" layoutX="66.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" stylesheets="@style.css" text="Del" />
+               </children>
+               <GridPane.margin>
+                  <Insets right="37.0" top="7.0" />
+               </GridPane.margin>
+            </HBox>
+            <Label fx:id="custDetailLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0" stylesheets="@style.css" text="Customer Details" GridPane.columnSpan="4" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="custNameLbl" stylesheets="@style.css" text="Name:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="2.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect></Label>
+            <TextField fx:id="custNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="110.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+            <Label fx:id="custAddyLbl" stylesheets="@style.css" text="Address:" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets left="4.0" right="2.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect></Label>
+            <TextField fx:id="custAddyField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="110.0" stylesheets="@style.css" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin></TextField>
+            <Label fx:id="custCityLbl" stylesheets="@style.css" text="City:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="2.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect></Label>
+            <TextField fx:id="custCityField" layoutX="57.0" layoutY="98.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="110.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+            <TextField fx:id="custTimezoneField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="160.0" stylesheets="@style.css" text="Cust Timezone" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="custCountryLbl" stylesheets="@style.css" text="Country" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets right="2.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="custCountryField" layoutX="57.0" layoutY="138.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="110.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+            <Label fx:id="custZipLbl" stylesheets="@style.css" text="Zip:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets left="4.0" right="2.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect></Label>
+            <TextField fx:id="custZipField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="88.0" stylesheets="@style.css" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin></TextField>
+            <Label fx:id="custPhoneLbl" stylesheets="@style.css" text="Phone:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="2.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect></Label>
+            <TextField fx:id="custPhoneField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="110.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+         </children>
+      </GridPane>
+      <TableView fx:id="customerTable" layoutX="2.0" layoutY="237.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#popCustFields" prefHeight="300.0" prefWidth="327.0" stylesheets="@style.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="280.0">
+        <columns>
+          <TableColumn fx:id="custNameCol" editable="false" prefWidth="100.0" resizable="false" text="Name" />
+          <TableColumn fx:id="custAddyCol" prefWidth="125.0" resizable="false" text="Address" />
+            <TableColumn fx:id="custPhoneCol" prefWidth="100.0" resizable="false" text="Phone" />
+        </columns>
+      </TableView>
+      <GridPane fx:id="apptGrid" layoutX="408.0" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="600.0" stylesheets="@style.css" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="372.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="35.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="125.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="167.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="168.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+         </rowConstraints>
+         <children>
+            <TextArea fx:id="descTextArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="330.0" stylesheets="@style.css" text="Description..." GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.rowSpan="2" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets left="4.0" top="7.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Label fx:id="custIdLbl" stylesheets="@style.css" text="Cust ID:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="64.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+               <padding>
+                  <Insets left="14.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="custIdField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" stylesheets="@style.css" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="apptDateLbl" stylesheets="@style.css" text="Appt Date:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <Label fx:id="apptLocLbl" stylesheets="@style.css" text="Location:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <TextField fx:id="apptLocField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="apptContLbl" stylesheets="@style.css" text="Contact:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <TextField fx:id="apptContField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="createdByLbl" stylesheets="@style.css" text="Created By:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <TextField fx:id="createdByField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="lastUpdateLbl" stylesheets="@style.css" text="Last Update:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <TextField fx:id="lastUpdateField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="apptIdLbl" stylesheets="@style.css" text="Appt ID:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="64.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+               <padding>
+                  <Insets left="13.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="apptIdField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" stylesheets="@style.css" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="startTimeLbl" stylesheets="@style.css" text="Start:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <TextField fx:id="startTimeField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" stylesheets="@style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets left="4.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="endTimeLbl" stylesheets="@style.css" text="End:" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets left="65.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <TextField fx:id="endTimeField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" stylesheets="@style.css" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets right="26.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="apptDescLbl" stylesheets="@style.css" text="Description:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="apptDetailLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0" stylesheets="@style.css" text="Appointment Details" GridPane.columnSpan="4" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+               <effect>
+                  <DropShadow height="2.0" offsetX="1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="lastUpdateByField" layoutX="79.0" layoutY="190.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+            <Label fx:id="lastUpdateByLbl" layoutX="15.0" layoutY="195.0" stylesheets="@style.css" text="Last Update By:" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <effect>
+                  <DropShadow height="2.0" offsetX="-1.0" offsetY="1.0" radius="0.5" spread="1.0" width="2.0" />
+               </effect>
+            </Label>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="123.0" spacing="2.0" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <children>
+                  <Button fx:id="addApptBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddAppt" prefHeight="25.0" prefWidth="40.0" stylesheets="@style.css" text="Add" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="modApptBtn" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleModAppt" prefHeight="25.0" prefWidth="40.0" stylesheets="@style.css" text="Mod" HBox.hgrow="NEVER" />
+                  <Button fx:id="delApptBtn" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" stylesheets="@style.css" text="Del" HBox.hgrow="NEVER" />
+               </children>
+               <padding>
+                  <Insets top="12.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <TextField fx:id="apptDateField" layoutX="108.0" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="140.0" stylesheets="@style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+         </children>
+      </GridPane>
+      <TableView fx:id="appointmentTable" layoutX="612.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#popApptFields" prefHeight="300.0" prefWidth="630.0" stylesheets="@style.css" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="280.0">
+        <columns>
+            <TableColumn fx:id="apptDateCol" editable="false" prefWidth="60.0" resizable="false" text="Date" />
+            <TableColumn fx:id="startCol" editable="false" prefWidth="60.0" resizable="false" text="Start" />
+            <TableColumn fx:id="endCol" editable="false" prefWidth="60.0" resizable="false" text="End" />
+            <TableColumn fx:id="locationCol" editable="false" prefWidth="75.0" resizable="false" text="Location" />
+            <TableColumn fx:id="contactCol" editable="false" prefWidth="75.0" resizable="false" text="Contact" />
+            <TableColumn fx:id="descCol" editable="false" prefWidth="144.0" resizable="false" text="Description" />
+            <TableColumn fx:id="createdByCol" editable="false" prefWidth="75.0" resizable="false" text="Created By" />
+            <TableColumn fx:id="lastUpdateCol" editable="false" prefWidth="79.0" resizable="false" text="Last Update" />
+        </columns>
+      </TableView>
+      <Label fx:id="GCLLC_Lbl" layoutX="20.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@style.css" text="globalConsulting, LLC." AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="583.0" />
+      <Label fx:id="loggedInUserLbl" layoutX="165.0" layoutY="583.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="14.0" prefWidth="103.0" stylesheets="@style.css" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="583.0" />
+      <Label fx:id="loggedInUserField" layoutX="522.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="17.0" />
+   </children>
+</AnchorPane>

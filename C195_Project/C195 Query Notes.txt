@@ -1,0 +1,34 @@
+select cu.customerID, cu.customerName, ad.address, ad.address2, ci.city, ad.postalCode, co.country from customer cu, address ad, city ci, country co
+WHERE cu.addressId=ad.addressId AND ad.cityId=ci.cityId AND ci.countryId=co.countryId;
+
+
+
+
+int value1 = customer.custIdProperty().getValue();
+                    String value2 = customer.custNameProperty().getValueSafe();
+                    String value3 = customer.custAddyProperty().getValueSafe();
+                       int value4 = customer.activeProperty().getValue();
+                    String value5 = customer.createDateProperty().getValue().toString();
+                    String value6 = customer.createdByProperty().getValueSafe();
+                    String value7 = customer.lastUpdateProperty().getValue().toString();
+                    String value8 = customer.lastUpdateByProperty().getValueSafe();
+
+
+String sql = "UPDATE customer SET customerName='" + value2 +"', address='" + value3 +
+                        "', active='" + value4 +"', createDate='" + value5 +
+			"', createdBy='" + value6 +"', lastUpdate='" + value7 +
+                        "', lastUpdateBy='" + value8 +"' WHERE customerId=" + value1;
+                
+
+1) Customer Name | customer.customerName
+2) Customer Addy | address.address
+3) Customer Addy2| address.address2
+4) Customer City | city.city
+5) Customer Zip  | address.postalCode
+6) Customer Cntry| country.country
+7) Customer Phone| address.phone
+
+
+UPDATE customer cu, address ad, city ci, country co 
+SET cu.customerName= "Eddie Grant", ad.address="1212 Electric Avenue", ad.address2="#609", ci.city="Miami", ad.phone= 6024587954, co.country="United States", ad.postalCode=33125
+WHERE cu.customerId= 8 AND cu.addressId=ad.addressId AND ad.cityId=ci.cityId AND ci.countryId=co.countryId;

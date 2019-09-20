@@ -1,0 +1,3 @@
+Timestamp: 2018-02-25
+User: test has successfully logged in with 
+	password: test.

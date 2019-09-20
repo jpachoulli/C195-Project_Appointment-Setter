@@ -1,0 +1,14 @@
+ Login success: 	true
+ Timestamp: 		2018-03-11T11:42:24.818
+ 
+ Successful Login!!
+
+ User: 		test
+ Password: 		test
+
+...allegedly this log existed and was appended... 
+...is that true?  Do you see more than one entry? 
+
+Yes [ ]   Yes = working code 
+
+No  [ ]   No  = broken code

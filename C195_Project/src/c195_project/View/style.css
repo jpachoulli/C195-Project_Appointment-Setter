@@ -1,0 +1,97 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 27, 2018, 4:48:13 PM
+    Author     : JJ_2
+*/
+
+.text {
+    -fx-font-family: "Calibri";
+    -fx-font-style: italic;
+    /*-fx-font-smoothing-type: gray;*/
+}
+
+.button {
+    -fx-font-family: "Calibri";
+    -fx-font-style: italic;
+    -fx-font-fill: #2f4f4f;
+    -fx-fill: red;
+}
+
+.table-view {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 8pt;
+    -fx-font-style: italic;
+}
+
+#gcLoginText { /* This is the company name on the login screen */
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-font-smoothing-type: gray; /* forces anti-aliasing [gray | lcd (default) ] */    
+    -fx-font-size: 36pt;
+}
+
+#GCLLC_Lbl {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 8pt;
+    -fx-font-style: italic;
+    -fx-text-fill: #2f4f4f;
+}
+
+#loggedInUserLbl {
+    -fx-text-fill: #2f4f4f;
+    -fx-font-size: 8pt;
+}
+
+#custDetailLbl {    
+    -fx-text-fill: lightgrey;
+    -fx-font-size: 24pt;
+}
+
+#apptDetailLbl {
+    -fx-text-fill: lightgrey;
+    -fx-font-size: 24pt;
+}
+
+#custNameLbl, #custAddyLbl, #custCountryLbl, #custCityLbl, #gcLoginText,
+#custZipLbl, #custPhoneLbl, #apptLocLbl, #apptDateLbl, #custIdLbl, #apptContLbl,
+#startTimeLbl, #endTimeLbl, #apptIdLbl, #createdByLbl, #apptDescLbl, #lastUpdateLbl, #lastUpdateByLbl {
+    -fx-text-fill: lightgray;
+}
+
+#userIdLabel {
+    -fx-font-family: "Calibri";
+    -fx-font-style: italic;
+    -fx-font-size: 12pt;
+}
+
+#addCustBtn {
+    -fx-background-color: #000000, linear-gradient(#7ebcea, #2f4b8f), linear-gradient(#426ab7, #263e75), linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+#addCustBtn Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+
+#modCustLbl {
+    -fx-text-fill: lightgray;
+    -fx-font-size: 24 pt;
+}
+
+#addNewCustLbl {
+    -fx-text-fill: lightgray;
+    -fx-font-size: 24 pt;
+}
+
+
+
+
+
+
